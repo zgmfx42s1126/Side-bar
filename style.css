@@ -8,7 +8,10 @@
 }
 
 body {
-    background: bisque;
+    min-height: 100vh;
+    background: url(milet\ bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .sidebar {
@@ -17,7 +20,10 @@ body {
     left: 0;
     width: 80px;
     height: 100%;
-    background: rgb(84, 151, 44);
+    background: transparent;
+    backdrop-filter: blur(40px);
+    border-right:2px solid rgba(255, 255, 255, .2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
     padding: 6px 14px;
     transition: .5s;
 
@@ -111,4 +117,5 @@ body {
 .sidebar.active .link-name {
     opacity: 1;
     pointer-events: auto;
+    transition-delay: calc(.1s * var(--i));
 }
